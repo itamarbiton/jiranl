@@ -27,7 +27,7 @@ import jiranl_consts
 IS_DEBUG = False
 
 def perform_create_issue(json_str):
-    url = "https://bitonitamar.atlassian.net/rest/api/3/issue"
+    url = "https://%s.atlassian.net/rest/api/3/issue" % jiranl_consts.JIRA_WORKSPACE
     auth = HTTPBasicAuth(jiranl_consts.EMAIL, jiranl_consts.JIRA_API_KEY)
 
     headers = {
@@ -156,14 +156,14 @@ def fetch_json_from_url(url):
 
 
 def users():
-    json_result = fetch_json_from_url('https://bitonitamar.atlassian.net/rest/api/3/users?maxResults=50&startAt=0')
+    json_result = fetch_json_from_url('https://%s.atlassian.net/rest/api/3/users?maxResults=50&startAt=0' % jiranl_consts.JIRA_WORKSPACE)
     json_str = json.dumps(json_result)
     users = parse_users(json_str)
     print_users(users)
 
 
 def projects():
-    json_result = fetch_json_from_url('https://bitonitamar.atlassian.net/rest/api/3/project/search?maxResults=50&startAt=0')
+    json_result = fetch_json_from_url('https://%s.atlassian.net/rest/api/3/project/search?maxResults=50&startAt=0' % jiranl_consts.JIRA_WORKSPACE)
     json_str = json.dumps(json_result)
     projects = parse_projects(json_str)
     print_projects(projects)

@@ -14,12 +14,13 @@ using the following commands before running the script
 
 ## Setup
 
-To work properly, start by configuring your JIRA email address and API token as well as the OpenAI API token
+To work properly, start by configuring your JIRA email address, API token and workspace name, as well as the OpenAI API token
 in the `jiranl_consts.py` file, after configuration it should looks something like this
 
     JIRA_API_KEY = 'xxxxxxxxx'
     OPENAI_API_KEY = 'xxxxxxxxx'
     EMAIL = 'john@doe.com'
+    JIRA_WORKSPACE = 'johndoe' (i.e. the first part of the atlassian domain, e.g. https://johndoe.atlassian.com)
 
 ## Usage
 
