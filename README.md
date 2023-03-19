@@ -22,7 +22,7 @@ in the `jiranl_consts.py` file, after configuration it should looks something li
     JIRA_API_KEY = 'xxxxxxxxx'
     OPENAI_API_KEY = 'xxxxxxxxx'
     EMAIL = 'john@doe.com'
-    JIRA_WORKSPACE = 'johndoe' (i.e. the first part of the atlassian domain, e.g. https://johndoe.atlassian.com)
+    JIRA_WORKSPACE = 'johndoe' (i.e. the first part of the atlassian domain, e.g. https://johndoe.atlassian.net)
 
 ## Usage
 
