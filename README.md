@@ -26,7 +26,19 @@ in the `jiranl_consts.py` file, after configuration it should looks something li
 
 ## Usage
 
-To create an issue, use the `create_issue` command along with the `--prompt` parameter, e.g.
+### Create An Issue
 
-    python3 jiranl.py create_issue --prompt "Create an issue named 'Login button is broken'"
+To create an issue, simply call the script with a string description of your issue,
+you can assign the issue to users using their account ID
 
+    python3 jiranl.py "Create an issue named 'Login button is broken' assign it to 5c0bb5b48bb9b546bbb4b827"
+
+### Get User/Project IDs
+
+Passing `users` or `projects` will print project/users along with their identifiers
+
+    $ python3 jiranl.py users
+
+    1) Mike Mclean (5b0bb5b48bbb9b546efc4b827)
+    2) Freddy Jacobson (5b0bb5b48bbb9b546efc4b827)
+    3) Kara Mcbride (5b0bb5b48bbb9b546efc4b827)
