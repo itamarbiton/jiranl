@@ -24,8 +24,6 @@ from termcolor import colored
 
 import jiranl_consts
 
-IS_DEBUG = False
-
 def perform_create_issue(json_str):
     url = "https://%s.atlassian.net/rest/api/3/issue" % jiranl_consts.JIRA_WORKSPACE
     auth = HTTPBasicAuth(jiranl_consts.EMAIL, jiranl_consts.JIRA_API_KEY)
@@ -172,30 +170,17 @@ def projects():
 def create_issue(prompt):
     issue_json = generate_create_issue_json(prompt)
     parse_jira_issue_json(issue_json)
-
-    if IS_DEBUG:
-        response = input("resume? ")
-        if response == "Y":
-            perform_create_issue(issue_json)
-    else:
-        perform_create_issue(issue_json)
+    perform_create_issue(issue_json)
 
 
 def main():
-    if IS_DEBUG:
-        parser = argparse.ArgumentParser()
-        parser.add_argument('command', choices=['users', 'projects', 'create_issue'])
-        parser.add_argument('--prompt', type=str, help='Prompt for create_issue command')
-        args = parser.parse_args()
-
-        if args.command == 'users':
-            users()
-        elif args.command == 'projects':
-            projects()
-        elif args.command == 'create_issue':
-            create_issue(args.prompt)
+    arg = sys.argv[1]
+    if arg == 'users':
+        users()
+    elif arg == 'projects':
+        projects()
     else:
-        create_issue(sys.argv[1])
+        create_issue(arg)
 
 
 if __name__ == '__main__':
