@@ -1,3 +1,4 @@
 JIRA_API_KEY = ''
 OPENAI_API_KEY = ''
 EMAIL = ''
+JIRA_WORKSPACE = ''
