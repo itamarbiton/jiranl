@@ -12,6 +12,15 @@ using the following commands before running the script
     pip install openai
     pip install termcolor
 
+## Setup
+
+To work properly, start by configuring your JIRA email address and API token as well as the OpenAI API token
+in the `jiranl_consts.py` file, after configuration it should looks something like this
+
+    JIRA_API_KEY = 'xxxxxxxxx'
+    OPENAI_API_KEY = 'xxxxxxxxx'
+    EMAIL = 'john@doe.com'
+
 ## Usage
 
 To create an issue, use the `create_issue` command along with the `--prompt` parameter, e.g.
