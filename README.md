@@ -42,3 +42,5 @@ Passing `users` or `projects` will print project/users along with their identifi
     1) Mike Mclean (5b0bb5b48bbb9b546efc4b827)
     2) Freddy Jacobson (5b0bb5b48bbb9b546efc4b827)
     3) Kara Mcbride (5b0bb5b48bbb9b546efc4b827)
+
+**Pro Tip:** you can use a Raycast script command to run script using Raycast
