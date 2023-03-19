@@ -1,5 +1,7 @@
 # JIRA-NL
 
+![jirnal](https://user-images.githubusercontent.com/45729602/226185282-1d9f5e04-cb28-4cce-b555-15df49846791.gif)
+
 JIRA-NL is a little python script that uses ChatGPT to add natural language capabilities to JIRA,
 specifically in the context of creating JIRA issues.
 
